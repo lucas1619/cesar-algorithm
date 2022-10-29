@@ -54,6 +54,7 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue'
 import { encrypt } from '../utils/cesar_algorithm'
 
 interface Data {
@@ -62,7 +63,7 @@ interface Data {
   resultado: string
 }
 
-export default {
+export default defineComponent({
   name: 'Index',
   data() : Data {
     return {
@@ -76,5 +77,5 @@ export default {
       this.resultado = encrypt(this.texto, this.llave)
     },
   },
-}
+})
 </script>
